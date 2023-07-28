@@ -18,8 +18,8 @@ jobs:
         uses: ./actions/xelatex
         env:
           OUT_DIR: public
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
         with:
-          files: public/main.pdf
-          body: latest
+          name: main.pdf
+          path: public/main.pdf
