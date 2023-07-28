@@ -14,7 +14,7 @@ LABEL "com.github.actions.color"="blue"
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
     texlive-full \
-    texlive-xetex && \
+    texlive-xetex
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
