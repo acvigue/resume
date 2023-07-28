@@ -12,14 +12,12 @@ LABEL "com.github.actions.color"="blue"
 # Install all xelatex and LaTeX dependencies
 
 RUN apt-get update && \
-    apt-get install --yes --no-install-recommends \
+    apt-get install --yes \
     texlive-fonts-extra \
     texlive-fonts-recommended \
     texlive-latex-recommended \
     texlive-lang-english \
-    texlive-xetex && \
-    apt-get autoclean && apt-get --purge --yes autoremove && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    texlive-xetex
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
