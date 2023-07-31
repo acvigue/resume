@@ -50,10 +50,10 @@
 
 \geometry{
 	paper=letterpaper, % Paper size, change to letterpaper for US letter size
-	top=1.5cm, % Top margin
-	bottom=1.5cm, % Bottom margin
-	left=2cm, % Left margin
-	right=2cm, % Right margin
+	top=1.25cm, % Top margin
+	bottom=1.25cm, % Bottom margin
+	left=1.75cm, % Left margin
+	right=1.75cm, % Right margin
 	headheight=0.75cm, % Header height
 	footskip=1cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.5cm, % Space from the top margin to the baseline of the header
