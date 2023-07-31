@@ -42,6 +42,10 @@
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 
+\input{glyphtounicode}
+
+\pdfgentounicode=1
+
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
 %----------------------------------------------------------------------------------------
@@ -49,9 +53,9 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.75cm, % Top margin
-	bottom=1.75cm, % Bottom margin
+	paper=letterpaper, % Paper size, change to letterpaper for US letter size
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
 	left=2cm, % Left margin
 	right=2cm, % Right margin
 	headheight=0.75cm, % Header height
