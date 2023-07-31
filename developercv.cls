@@ -42,10 +42,6 @@
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 
-\input{glyphtounicode}
-
-\pdfgentounicode=1
-
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
 %----------------------------------------------------------------------------------------
