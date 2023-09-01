@@ -18,13 +18,11 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-      - name: Rename file 
-        run: mkdir gen && cp main.pdf gen/Resume.pdf
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: gen/Resume.pdf
+          path: main.pdf
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v3
         with:
@@ -33,4 +31,8 @@ jobs:
           aws-region: us-east-1
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 cp gen/Resume.pdf s3://blogcdn-vigue-me/Resume.pdf
+          aws s3 cp main.pdf s3://blogcdn-vigue-me/Resume.pdf
+      - name: Invalidate CloudFront Distribution
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/Resume.pdf" --no-cli-pager
+
