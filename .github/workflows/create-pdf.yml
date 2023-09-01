@@ -18,8 +18,18 @@ jobs:
         uses: ./actions/xelatex
         env:
           OUT_DIR: public
+      - name: Rename file 
+        run: mv public/main.pdf public/Resume.pdf
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: main.pdf
-          path: public/main.pdf
+          name: Resume.pdf
+          path: public/Resume.pdf
+      - uses: shallwefootball/upload-s3-action@master
+        name: Upload to S3
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: ${{ secrets.AWS_BUCKET }}
+          source_dir: 'public'
+          destination_dir: ''
