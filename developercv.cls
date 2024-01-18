@@ -54,8 +54,8 @@
 	bottom=1.5cm, % Bottom margin
 	left=1.5cm, % Left margin
 	right=1.5cm, % Right margin
-	headheight=0.75cm, % Header height
-	footskip=1cm, % Space from the bottom margin to the baseline of the footer
+	headheight=0cm, % Header height
+	footskip=0cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.5cm, % Space from the top margin to the baseline of the header
 	%showframe, % Uncomment to show how the type block is set on the page
 }
