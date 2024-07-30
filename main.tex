@@ -1,144 +1,148 @@
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\documentclass{cv}
 
-%----------------------------------------------------------------------------------------
+\setname{Aiden Vigue}{}
+\setaddress{Roanoke, VA}
+%\setmobile{+1 540-855-0510}
+\setmail{aiden@vigue.me}
+% \setcitizenship{Eldian Citizen}
+\setlinkedinaccount{https://www.linkedin.com/in/aidenvigue/} 
+\setgithubaccount{https://github.com/acvigue} 
 
+\definecolor{Persian}{HTML}{BB4430}
+\setthemecolor{Persian}
+
+    
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+%Create header
+\headerview
+\vspace{1ex} % white space
+%
+\section{Objective}
+\smallskip
+\explanationdetail{
+     Creative and self-motivated computer science student anticipating graduation in 2027. Seeking an internship to
+apply and grow my experience in firmware development and software engineering to help solve issues in today's world.
+}
+% 
+%
+\section{Skills}
+    \newcommand{\skillone}{\createskill{Programming Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Go \cpshalf Java \cpshalf JavaScript }}
+    %
+    \newcommand{\skilltwo}{\createskill{Technologies}{AWS EC2/Lambda/S3/CF \cpshalf GSAP \cpshalf Docker \cpshalf Vue \cpshalf NuxtJS \cpshalf Redis \cpshalf Three.JS }}
+    %
+    \newcommand{\skillthree}{\createskill{Software Packages}{Altium Designer \cpshalf Fusion 360 \cpshalf Autodesk Inventor \cpshalf GSAP \cpshalf ESP-IDF \cpshalf CMake \cpshalf Nginx}}
+    %
+    \newcommand{\skillfour}{\createskill{Hardware}{ARM Cortex-M \cpshalf Rockchip \cpshalf Espressif ESP32 \cpshalf Silicon Labs EFR32 \cpshalf Microchip AVR}}
+    %
+    \createskills{\skillone, \skilltwo, \skillthree, \skillfour}
+    \vspace{-3mm} % reduces whitespace!
+    %
+% 
+%
+\section{Education} 
+    \datedexperience{Purdue University}{Expected 2027}
+    \explanation{BSc Computer Science / Certificate in Entrepreneurship}{West Lafayette, IN} 
+    \datedexperience{Cave Spring High School}{May 2023}
+    \explanation{Dually enrolled at Virginia
+Western Community College and the Burton Center for Engineering}{Roanoke, VA}
+%
+\section{Experience}
+    %
+    \datedexperience{Levitree}{Jan 2024 - Present}
+    \explanation{Software \& Hardware Development Intern}{Remote}
+    \explanationdetail{
+    \smallskip
+     \coloredbullet\ %
+     Independently built a web application using Nuxt and Three.JS to visualize and modify terrain meshes for planning product usage. Implemented ML to automatically determine optimal placement of devices on site.
+    
+    \smallskip 
+    \coloredbullet\ %
+     Containerized and packaged multiple Python/TypeScript microservices for monitoring and scheduling control of Modbus PLC devices in order to create accurate time-series data to qualify for carbon credits.
+     
+     \smallskip
+     \coloredbullet\ %
+     Used Yocto Linux and a custom-written BSP to enable remote A/B OTA updates to devices in the field. Independently created a custom Linux SBC carrier board to connect to various devices and sensors over I\textsuperscript{2}C, RS485, Wi-Fi, and LoRA
+     
+     \smallskip
+     }
+     %
+     \datedexperience{Kohls}{2022 - Aug 2023} 
+    \explanation{Sales Team Lead}{Roanoke, VA} 
+    \explanationdetail{ 
+    \smallskip 
+    \coloredbullet\ %
+     Managed front-end operations, streamlined returns process, and facilitated effective communication between employees and management.
+     } 
+%
+\smallskip
+\smallskip
 
-\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% If your name is very short, use just one of the lines below
-	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Aiden}}}}} % First name
-	
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vigue}}}}} % Last name
-	
-	\vspace{6pt}
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{At}{12}{\href{mailto:aiden@vigue.me}{aiden@vigue.me}}\\	
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://vigue.me}{vigue.me}}\\
-	\icon{Github}{12}{\href{https://github.com/acvigue}{github.com/acvigue}}\\
-	\icon{Linkedin}{12}{\href{http://linkedin.com/in/aidenvigue/}{linkedin.com/in/aidenvigue}}
-\end{minipage}
+\section{Notable Projects}
+     %
+    \datedexperience{Kinetic Sand Coffee Table}{Nov 2022 - May 2023}
+    \explanation{Sponsored by JLCPCB \& Saleae}{}
+    \explanationdetail{
+    \smallskip 
+    \coloredbullet\ %
+     Modeled a polar-style robotic arm in Autodesk Inventor that moves a magnet around in a bed of sand while
+following a preprogrammed path. Designed a responsive web interface using Nuxt 3 and Tailwind CSS
+     
+     
+     \smallskip
+     \coloredbullet\ %
+     Developed a serverless backend API using AWS Lambda to authenticate users and host downloadable patterns for the robot to download. Used JSON Web Tokens to secure access and S3 to store the data.
+     
+     \smallskip
+     \coloredbullet\ %
+     Wrote a custom firmware for the ESP32 microcontroller to control the robot arm and communicate with the backend API. Used the ESP-IDF framework to manage the hardware and software interfaces.
+     
+    \smallskip
+     }
+     %
+    \datedexperience{Nixie Tube Clock}{Jan 2024 - Jun 2024}
+    \explanation{Sponsored by NextPCB \& Saleae}{}
+    \explanationdetail{
+    \smallskip 
+    \coloredbullet\ %
+     Utilized Altium Designer to create a custom board to carry high voltage DC and control signals to drive six Nixie Tubes in the style of a clock. Designed custom circuitry to convert low-voltage power input to the required tube ignition voltage.
+     
+     \smallskip
+     \coloredbullet\ %
+     Wrote and contributed a custom shift register driver to the ESPHome open-source project, along with documentation to create a similar project.
+     
+    \smallskip
+     }
+%
+\smallskip
+\smallskip
+%
+\section{Extracurriculars}
+     %
+    \datedexperience{Autodesk Student Ambassador}{Aug 2024 - Present}
+    \datedexperience{JLCPCB Content Creator}{Mar 2024 - Present}
+    \datedexperience{Eagle Scout}{Achieved 2022}
+    \explanation{Boy Scouts of America}{}
+     %
+%
+%
+\section{Awards}
+%    
+\explanationdetail{
+\smallskip
+\coloredbullet\ %
+\textbf{Judge's Prize}: Making Time \emph{Instructables} - 2024
 
-\vspace{0.1cm}
+\smallskip
+\coloredbullet\ %
+\textbf{First Prize}: Remake It - Student Design Contest \emph{Instructables} - 2024
 
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
+\smallskip
+\coloredbullet\ %
+\textbf{Grand Prize}: Fusion 360 Contest \emph{Instructables} - 2023
 
-\cvsect{Objective}
-
-\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	Creative, hard-working, and self-motivated computer science student anticipating graduation in 2027. Seeking an internship to apply and grow my experience in firmware development and software engineering to help solve issues in today's world.
-\end{minipage}
-
-\vspace{0.1cm}
-
-\cvsect{Technical Expertise}
-
-\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\textbf{Computer Skills:} CAD/CAE, Docker, Virtualization, UNIX Systems Administation, AWS, Google Cloud\\
-	\textbf{Languages:} C/C++, Java, NodeJS \& TypeScript, Shell, Python, Rust\\
-	\textbf{Software Packages:} ESP-IDF, CMake, Altium Designer, Autodesk Inventor \& Fusion 360, Xcode, Nginx\\
-	\textbf{Hardware:} ARM Cortex-M, Espressif ESP32, Silabs EFR32 \& EFM8, Microchip AVR\\
-\end{minipage}
-
-\vspace{0.1cm}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Education}
-
-\begin{entrylist}
-	\entry
-		{Expected 2027}
-		{Purdue University - BSc Computer Science / Certificate in Entrepreneurship}
-		{West Lafayette, Indiana}
-		{Currently pursuing a Bachelor of Science in Computer Science with a focus on embedded systems and a certificate in entrepreneurship.}
-	\entry
-		{2023}
-		{Cave Spring High School}
-		{Roanoke, Virginia}
-		{Showcased strong dedication to both academics and practical skills through coursework and hands-on projects at the Burton Center for Engineering while simultaneously taking college-level courses at Virginia Western Community College.}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\cvsect{Experience}
-
-\begin{entrylist}
-	\entry
-		{Jan. 2024 -- Present}
-		{Intern - Software \& Hardware Development}
-		{Levitree}
-		{Streamlined, packaged, and containerized multiple microservices to control and monitor PLCs attached to a host processor. Used embedded Linux distributions to prepare a ML-based climate change mitigation system for production. }
-	\entry
-		{2022 -- Aug. 2023}
-		{Sales Team Lead - Customer Service}
-		{Kohl's}
-		{Managed front-end operations, streamlined returns process, operated customer service desk, and facilitated effective communication between employees and management. Oversaw the consistent achievement of departmental sales targets.  \textbf{Associate of the Month - June 2023} }
-\end{entrylist}
-
-%---------
-%   PROJECTS
-%---------
-
-\cvsect{Projects}
-
-\begin{entrylist}
-	\entry
-		{2023}
-		{Multiprotocol Smart Home Hub}
-		{}
-		{Designed a custom circuit board with an ESP32 and various Silicon Labs IoT radio modules to operate as a wirelessly-connected smart home hub. Included a Bosch BME680 for environmental sensing. Used Altium Designer and Fusion 360.}
-		\entry
-		{2021 -- 2022}
-		{Kinetic Sand Coffee Table}
-		{}
-		{Modeled a polar-style robotic arm in Autodesk Inventor that moves a magnet around in a bed of sand while following a preprogrammed path. Programmed in C++, using ESP-IDF. Designed a responsive web interface in TypeScript and Vue 3 following the latest standards.}
-\end{entrylist}
-
-\vspace{0.3cm}
-
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{1\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Awards}
-	
-	\textbf{Instructables Fusion 360 Contest - Grand Prize} -- 2023\\
-	\textbf{Eagle Scout (Boy Scouts of America)} -- 2022\\
-	\textbf{Instructables Lighting Challenge - 1\textsuperscript{st} Place} -- 2021\\
-	\textbf{GE Lights For Life - 1\textsuperscript{st} Place} -- 2021\\
-\end{minipage}
-
-\vspace{\baselineskip}
-
-%----------------------------------------------------------------------------------------
-
+\smallskip
+\coloredbullet\ %
+\textbf{First Prize}: Lighting Challenge \emph{Instructables} - 2022
+ }
 \end{document}
