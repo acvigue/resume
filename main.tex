@@ -27,13 +27,13 @@ apply and grow my experience in firmware development and software engineering to
 % 
 %
 \section{Skills}
-    \newcommand{\skillone}{\createskill{Programming Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Go \cpshalf Java \cpshalf JavaScript }}
+    \newcommand{\skillone}{\createskill{Programming Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Go \cpshalf Java }}
     %
-    \newcommand{\skilltwo}{\createskill{Technologies}{AWS EC2/Lambda/S3/CF \cpshalf GSAP \cpshalf Docker \cpshalf Vue \cpshalf NuxtJS \cpshalf Redis \cpshalf Three.JS }}
+    \newcommand{\skilltwo}{\createskill{Technologies}{Oracle Cloud \cpshalf Docker/K8S \cpshalf Vue/NuxtJS \cpshalf FreeRTOS \cpshalf Redis \cpshalf Postgres \cpshalf Yocto Linux}}
     %
     \newcommand{\skillthree}{\createskill{Software Packages}{Altium Designer \cpshalf Fusion 360 \cpshalf Autodesk Inventor \cpshalf GSAP \cpshalf ESP-IDF \cpshalf CMake \cpshalf Nginx}}
     %
-    \newcommand{\skillfour}{\createskill{Hardware}{ARM Cortex-M \cpshalf Rockchip \cpshalf Espressif ESP32 \cpshalf Silicon Labs EFR32 \cpshalf Microchip AVR}}
+    \newcommand{\skillfour}{\createskill{Hardware}{STM32 \cpshalf Rockchip \cpshalf Espressif \cpshalf EFR32 \cpshalf AVR}}
     %
     \createskills{\skillone, \skilltwo, \skillthree, \skillfour}
     \vspace{-3mm} % reduces whitespace!
@@ -43,37 +43,26 @@ apply and grow my experience in firmware development and software engineering to
 \section{Education} 
     \datedexperience{Purdue University}{Expected 2027}
     \explanation{BSc Computer Science / Certificate in Entrepreneurship}{West Lafayette, IN} 
-    \datedexperience{Cave Spring High School}{May 2023}
-    \explanation{Dually enrolled at Virginia
-Western Community College and the Burton Center for Engineering}{Roanoke, VA}
 %
 \section{Experience}
     %
     \datedexperience{Levitree}{Jan 2024 - Present}
-    \explanation{Software \& Hardware Development}{Remote / F.T. Contracted}
+    \explanation{Full Stack Enginner}{Hybrid}
     \explanationdetail{
     \smallskip
      \coloredbullet\ %
-     Independently built a web application using Nuxt and Three.JS to visualize and modify terrain meshes for planning product usage. Implemented ML to automatically determine optimal placement of devices on site.
+     Led end-to-end embedded product development—spanning custom hardware, firmware, and on-device microservices, delivered robust edge solutions in rugged environments.
     
     \smallskip 
     \coloredbullet\ %
-     Containerized and packaged multiple Python/TypeScript microservices for monitoring and scheduling control of Modbus PLC devices in order to create accurate time-series data to qualify for carbon credits.
+     Designed and developed custom PCBs and firmware in C (FreeRTOS on STM32; ESP-IDF on ESP32) with LTE Cat-M1 connectivity, long-range radio and analog sensor integration
      
      \smallskip
      \coloredbullet\ %
-     Used Yocto Linux and a custom-written BSP to enable remote A/B OTA updates to devices in the field. Independently created a custom Linux SBC carrier board to connect to various devices and sensors over I\textsuperscript{2}C, RS485, Wi-Fi, and LoRA
+     Architected and implemented Postgres-backed microservices in TypeScript and Python for device data ingestion, processing, and management
      
      \smallskip
      }
-     %
-     \datedexperience{Koios Digital}{Nov 2023 - Present} 
-    \explanation{Founder}{Roanoke, VA} 
-    \explanationdetail{ 
-    \smallskip 
-    \coloredbullet\ %
-     Created a digital design agency specializing in PCB design, software development, and web development for small businesses. Developed a custom PCB for a client to control a 3D printer using an ESP32 and TMC2209 stepper drivers.
-     } 
 %
 \smallskip
 \smallskip
@@ -96,6 +85,19 @@ following a preprogrammed path. Designed a responsive web interface using Nuxt 3
      \smallskip
      \coloredbullet\ %
      Wrote a custom firmware for the ESP32 microcontroller to control the robot arm and communicate with the backend API. Used the ESP-IDF framework to manage the hardware and software interfaces.
+     
+    \smallskip
+     }
+          \datedexperience{Apple Home Key Hardware}{Jan 2024 - Jun 2024}
+    \explanation{Sponsored by JLCPCB}{}
+    \explanationdetail{
+    \smallskip 
+    \coloredbullet\ %
+     Engineered a custom PCB with a NFC frontend and a secure element to function as a Home Key reader. Designed the board to be compatible with the Apple Home Key API and to securely store the key data.
+     
+     \smallskip
+     \coloredbullet\ %
+     Developed a custom firmware in C using the ESP-IDF framework to manage the NFC communication and secure element operations. Implemented a secure boot process to ensure the integrity of the firmware.
      
     \smallskip
      }
