@@ -5,13 +5,13 @@
 %\setmobile{+1 540-855-0510}
 \setmail{aiden@vigue.me}
 % \setcitizenship{Eldian Citizen}
-\setlinkedinaccount{https://www.linkedin.com/in/aidenvigue/} 
-\setgithubaccount{https://github.com/acvigue} 
+\setlinkedinaccount{https://www.linkedin.com/in/aidenvigue/}
+\setgithubaccount{https://github.com/acvigue}
 
 \definecolor{Persian}{HTML}{BB4430}
 \setthemecolor{Persian}
 
-    
+
 \begin{document}
 
 %Create header
@@ -21,28 +21,27 @@
 \section{Objective}
 \smallskip
 \explanationdetail{
-     Creative and self-motivated computer science student anticipating graduation in 2027. Seeking to
-grow my experience in firmware development and software engineering to help solve issues in today's world.
+     Hardware and software engineer pursuing a B.S. in Computer Science at Purdue, graduating 2027. I design multi-layer PCBs, write firmware, and build the full-stack systems that connect embedded devices to the cloud --- owning the entire stack from schematic to deployment.
 }
-% 
+%
 %
 \section{Skills}
-    \newcommand{\skillone}{\createskill{Programming Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Go \cpshalf Java }}
+    \newcommand{\skillone}{\createskill{Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Swift}}
     %
-    \newcommand{\skilltwo}{\createskill{Technologies}{Oracle Cloud \cpshalf Docker/K8S \cpshalf Vue/NuxtJS \cpshalf FreeRTOS \cpshalf Redis \cpshalf Postgres \cpshalf Yocto Linux}}
+    \newcommand{\skilltwo}{\createskill{Technologies}{FreeRTOS \cpshalf ESP-IDF \cpshalf Docker \cpshalf Vue/Nuxt \cpshalf NestJS \cpshalf Postgres \cpshalf Embedded Linux}}
     %
-    \newcommand{\skillthree}{\createskill{Software Packages}{Altium Designer \cpshalf Fusion 360 \cpshalf Autodesk Inventor \cpshalf GSAP \cpshalf ESP-IDF \cpshalf CMake \cpshalf Nginx}}
+    \newcommand{\skillthree}{\createskill{Software}{Altium Designer \cpshalf Fusion 360 \cpshalf CMake \cpshalf Git}}
     %
-    \newcommand{\skillfour}{\createskill{Hardware}{STM32 \cpshalf Rockchip \cpshalf Espressif \cpshalf EFR32 \cpshalf AVR}}
+    \newcommand{\skillfour}{\createskill{Hardware}{STM32 \cpshalf ESP32 \cpshalf CAN Bus \cpshalf LTE Cat-M1 \cpshalf BLE \cpshalf USB-C PD}}
     %
     \createskills{\skillone, \skilltwo, \skillthree, \skillfour}
     \vspace{-3mm} % reduces whitespace!
     %
-% 
 %
-\section{Education} 
+%
+\section{Education}
     \datedexperience{Purdue University}{Expected 2027}
-    \explanation{BSc Computer Science / Certificate in Entrepreneurship}{West Lafayette, IN} 
+    \explanation{BSc Computer Science / Certificate in Entrepreneurship}{West Lafayette, IN}
 %
 \section{Experience}
     %
@@ -51,16 +50,34 @@ grow my experience in firmware development and software engineering to help solv
     \explanationdetail{
     \smallskip
      \coloredbullet\ %
-     Led end-to-end embedded product development—spanning custom hardware, firmware, and on-device microservices, delivered robust edge solutions in rugged environments.
-    
-    \smallskip 
+     Design multi-layer custom PCBs from scratch in Altium and develop firmware in C (FreeRTOS on STM32; ESP-IDF on ESP32) with LTE Cat-M1 connectivity and analog sensor integration
+
+    \smallskip
     \coloredbullet\ %
-     Designed and developed custom PCBs and firmware in C (FreeRTOS on STM32; ESP-IDF on ESP32) with LTE Cat-M1 connectivity, long-range radio and analog sensor integration
-     
+     Coordinate global fabrication runs and own hardware bring-up, debugging at the register level with logic analyzers and oscilloscopes
+
      \smallskip
      \coloredbullet\ %
-     Architected and implemented Postgres-backed microservices in TypeScript and Python for device data ingestion, processing, and management
-     
+     Build and maintain embedded Linux applications for containerized field deployment
+
+     \smallskip
+     \coloredbullet\ %
+     Build Postgres-backed microservices in TypeScript and Python for device telemetry and fleet management
+
+     \smallskip
+     }
+    %
+    \datedexperience{Koios Digital}{2023 - Present}
+    \explanation{Founder}{}
+    \explanationdetail{
+    \smallskip
+     \coloredbullet\ %
+     Consulting and consumer hardware product development focused on RF and cloud control
+
+    \smallskip
+    \coloredbullet\ %
+     Building an IoT as-a-service platform with managed PKI, device observability, and secure provisioning for constrained devices
+
      \smallskip
      }
 %
@@ -69,50 +86,44 @@ grow my experience in firmware development and software engineering to help solv
 
 \section{Notable Projects}
      %
-    \datedexperience{Kinetic Sand Coffee Table}{Nov 2022 - May 2023}
-    \explanation{Sponsored by JLCPCB \& Saleae}{}
+    \datedexperience{132-Module Split Flap Display}{2025 - Present}
     \explanationdetail{
-    \smallskip 
-    \coloredbullet\ %
-     Modeled a polar-style robotic arm in Autodesk Inventor that moves a magnet around in a bed of sand while
-following a preprogrammed path. Designed a responsive web interface using Nuxt 3 and Tailwind CSS
-     
-     
-     \smallskip
-     \coloredbullet\ %
-     Developed a serverless backend API using AWS Lambda to authenticate users and host downloadable patterns for the robot to download. Used JSON Web Tokens to secure access and S3 to store the data.
-     
-     \smallskip
-     \coloredbullet\ %
-     Wrote a custom firmware for the ESP32 microcontroller to control the robot arm and communicate with the backend API. Used the ESP-IDF framework to manage the hardware and software interfaces.
-     
     \smallskip
-     }
-          \datedexperience{Apple Home Key Hardware}{Jan 2024 - Jun 2024}
-    \explanation{Sponsored by JLCPCB}{}
-    \explanationdetail{
-    \smallskip 
     \coloredbullet\ %
-     Engineered a custom PCB with a NFC frontend and a secure element to function as a Home Key reader. Designed the board to be compatible with the Apple Home Key API and to securely store the key data.
-     
+     132 individually addressable modules, each driven by a custom STM32 4-layer stepper driver PCB over CAN Bus with per-module acceleration curves and transition timing
+
      \smallskip
      \coloredbullet\ %
-     Developed a custom firmware in C using the ESP-IDF framework to manage the NFC communication and secure element operations. Implemented a secure boot process to ensure the integrity of the firmware.
-     
+     Network-connected controller with remote control through an mTLS-secured WebSocket connection
+
     \smallskip
      }
      %
-    \datedexperience{Nixie Tube Clock}{Jan 2024 - Jun 2024}
-    \explanation{Sponsored by NextPCB \& Saleae}{}
+    \datedexperience{Tabletop Kinetic Sand Robot}{Nov 2022 - May 2023}
+    \explanation{Sponsored by JLCPCB \& Saleae}{}
     \explanationdetail{
-    \smallskip 
+    \smallskip
     \coloredbullet\ %
-     Utilized Altium Designer to create a custom board to carry high voltage DC and control signals to drive six Nixie Tubes in the style of a clock. Designed custom circuitry to convert low-voltage power input to the required tube ignition voltage.
-     
+     ESP32-S3 motion controller driving a magnetic polar arm to trace patterns in sand, with a custom 4-layer PCB integrating USB-C PD power delivery and dual stepper drivers
+
      \smallskip
      \coloredbullet\ %
-     Wrote and contributed a custom shift register driver to the ESPHome open-source project, along with documentation to create a similar project.
-     
+     Cloud pattern management over mTLS, with a Vue web interface for remote control and pattern upload
+
+    \smallskip
+     }
+     %
+    \datedexperience{Apple Home Key Hardware}{Jan 2024 - Jun 2024}
+    \explanation{Sponsored by JLCPCB}{}
+    \explanationdetail{
+    \smallskip
+    \coloredbullet\ %
+     Custom PCB with NFC frontend and secure element functioning as an Apple Home Key reader with secure on-device key storage
+
+     \smallskip
+     \coloredbullet\ %
+     Firmware in C on ESP-IDF managing NFC communication, secure element operations, and secure boot chain
+
     \smallskip
      }
 %
@@ -121,6 +132,8 @@ following a preprogrammed path. Designed a responsive web interface using Nuxt 3
 %
 \section{Extracurriculars}
      %
+    \datedexperience{Jellyfin --- SwiftFin Project Lead}{2022 - Present}
+    \explanation{Architecture and development lead for the native iOS/tvOS video client}{}
     \datedexperience{Autodesk Student Ambassador}{Aug 2024 - Present}
     \datedexperience{JLCPCB Content Creator}{Mar 2024 - Present}
     \datedexperience{Eagle Scout}{Achieved 2022}
@@ -129,7 +142,7 @@ following a preprogrammed path. Designed a responsive web interface using Nuxt 3
 %
 %
 \section{Awards}
-%    
+%
 \explanationdetail{
 \smallskip
 \coloredbullet\ %
