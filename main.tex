@@ -2,9 +2,7 @@
 
 \setname{Aiden Vigue}{}
 \setaddress{Roanoke, VA}
-%\setmobile{+1 540-855-0510}
 \setmail{aiden@vigue.me}
-% \setcitizenship{Eldian Citizen}
 \setlinkedinaccount{https://www.linkedin.com/in/aidenvigue/}
 \setgithubaccount{https://github.com/acvigue}
 
@@ -16,19 +14,19 @@
 
 %Create header
 \headerview
-\vspace{1ex} % white space
+\vspace{0.5ex}
 %
 \section{Skills}
-    \newcommand{\skillone}{\createskill{Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Swift}}
+    \newcommand{\skillone}{\createskill{Languages}{C \cpshalf C++ \cpshalf TypeScript \cpshalf Python \cpshalf Swift \cpshalf Go}}
     %
-    \newcommand{\skilltwo}{\createskill{Technologies}{FreeRTOS \cpshalf ESP-IDF \cpshalf Docker \cpshalf Vue/Nuxt \cpshalf NestJS \cpshalf Postgres \cpshalf Embedded Linux}}
+    \newcommand{\skilltwo}{\createskill{Technologies}{FreeRTOS \cpshalf ESP-IDF \cpshalf Docker \cpshalf Vue/Nuxt \cpshalf NestJS \cpshalf Postgres \cpshalf Redis \cpshalf Embedded Linux}}
     %
     \newcommand{\skillthree}{\createskill{Software}{Altium Designer \cpshalf Fusion 360 \cpshalf CMake \cpshalf Git}}
     %
-    \newcommand{\skillfour}{\createskill{Hardware}{STM32 \cpshalf ESP32 \cpshalf CAN Bus \cpshalf LTE Cat-M1 \cpshalf BLE \cpshalf USB-C PD}}
+    \newcommand{\skillfour}{\createskill{Hardware}{STM32 \cpshalf ESP32 \cpshalf CAN Bus \cpshalf LTE Cat-M1 \cpshalf BLE \cpshalf USB-C PD \cpshalf HUB75}}
     %
     \createskills{\skillone, \skilltwo, \skillthree, \skillfour}
-    \vspace{-3mm} % reduces whitespace!
+    \vspace{-3mm}
     %
 %
 %
@@ -38,29 +36,29 @@
 %
 \section{Experience}
     %
-    \datedexperience{Terranova}{Jan 2024 - Present}
+    \datedexperience{\href{https://terranova.inc}{Terranova}}{Jan 2024 - Present}
     \explanation{Hardware \& Software Engineer}{Hybrid}
     \explanationdetail{
     \smallskip
      \coloredbullet\ %
-     Design multi-layer custom PCBs from scratch in Altium and develop firmware in C (FreeRTOS on STM32; ESP-IDF on ESP32) with LTE Cat-M1 connectivity and analog sensor integration
-
-    \smallskip
-    \coloredbullet\ %
-     Coordinate global fabrication runs and own hardware bring-up, debugging at the register level with logic analyzers and oscilloscopes
+     Designed and engineered a hardened industrial PLC system: 6 custom 4-layer PCBs with plug-and-play module architecture, CAN bus auto-discovery and provisioning via a custom bootloader with protobuf serialization, sub-10ms response times, and wireless sub-networks with 10-mile range
 
      \smallskip
      \coloredbullet\ %
-     Build and maintain embedded Linux applications for containerized field deployment
+     Develop FreeRTOS firmware in C across STM32 and ESP32 platforms with LTE Cat-M1 connectivity, analog sensor integration, and Bluetooth coprocessor firmware enabling iOS app control
 
      \smallskip
      \coloredbullet\ %
-     Build Postgres-backed microservices in TypeScript and Python for device telemetry and fleet management
+     Built a custom Yocto Linux distribution for the SoM to orchestrate the full network of connected boards; containerized NestJS backend with embedded Postgres and time-series DB, fronted by a Vue app with a custom component library
+
+     \smallskip
+     \coloredbullet\ %
+     Coordinate global fabrication runs and own full hardware lifecycle: schematic capture, BOM management, register-level bring-up and debug with logic analyzers and oscilloscopes
 
      \smallskip
      }
     %
-    \datedexperience{Koios Digital}{2023 - Present}
+    \datedexperience{Koios Digital}{Nov 2023 - Present}
     \explanation{Founder}{}
     \explanationdetail{
     \smallskip
@@ -76,81 +74,67 @@
 %
 \smallskip
 \smallskip
-
 \section{Notable Projects}
      %
-    \datedexperience{132-Module Split Flap Display}{2025 - Present}
+    \datedexperience{\href{https://vigue.me/posts/modular-split-flap-display}{132-Module Split Flap Display}}{Dec 2025 - Present}
     \explanationdetail{
     \smallskip
     \coloredbullet\ %
-     132 individually addressable modules, each driven by a custom STM32 4-layer stepper driver PCB over CAN Bus with per-module acceleration curves and transition timing
+     132 custom 20x20mm 4-layer STM32F103 PCBs with discrete MOSFET H-bridge, IR beam-break homing, and CAN transceiver; DMA-driven I/O with an optimized superloop scheduler for low-latency command acknowledgement and preventative watchdogs
 
      \smallskip
      \coloredbullet\ %
-     Network-connected controller with remote control through an mTLS-secured WebSocket connection
+     Designed entire mechanical system from scratch: 3D-printed module housings with tight tolerances, UV-printed flaps on FR4 fiberglass, waterjet-cut metal enclosure, and custom crimped wiring harnesses
+
+    \smallskip
+     \coloredbullet\ %
+     Distributed power architecture: PCB-mount AC-DC converters (30--48W per backplane) with 10--15mm AC/signal isolation and proper creepage for 120VAC
+
+     \smallskip
+     \coloredbullet\ %
+     NestJS/TypeScript backend with Redis and Postgres enabling sub-50ms cross-display synchronization and worldwide control via mTLS-secured WebSocket
 
     \smallskip
      }
      %
-    \datedexperience{Tabletop Kinetic Sand Robot}{Nov 2022 - May 2023}
-    \explanation{Sponsored by JLCPCB \& Saleae}{}
+    \datedexperience{\href{https://vigue.me/posts/esp32-internet-connected-smart-matrix}{Cloud-Connected LED Matrix System}}{Mar 2024 - Jan 2026}
     \explanationdetail{
     \smallskip
     \coloredbullet\ %
-     ESP32-S3 motion controller driving a magnetic polar arm to trace patterns in sand, with a custom 4-layer PCB integrating USB-C PD power delivery and dual stepper drivers
+     Engineered a custom ESP32-S3 HUB75 controller through 10+ schematic revisions: dual 74HC245 level shifters, HUSB238 USB-C PD negotiation up to 20V, MP8759GD buck converter, supporting multiple panel sizes with a 10-pin expansion header for multi-panel chaining
 
      \smallskip
      \coloredbullet\ %
-     Cloud pattern management over mTLS, with a Vue web interface for remote control and pattern upload
+     Built full-stack real-time pipeline from scratch: Go WebSocket server delivering sub-frame-latency updates, Go rendering sidecar with cached frame delivery, NestJS API, Redis Streams for device-to-cloud messaging, Capacitor Vue mobile app, mTLS certificate-based device identity, and globally distributed Postgres cluster management
+
+     \smallskip
+     \coloredbullet\ %
+     Manufactured and validated 25+ test devices end-to-end: BOM sourcing across 50+ unique components, SMT stencil reflow, USB-C PD power validation, and RF compliance testing through 10+ iterative board spins
 
     \smallskip
      }
      %
-    \datedexperience{Apple Home Key Hardware}{Jan 2024 - Jun 2024}
-    \explanation{Sponsored by JLCPCB}{}
+    \datedexperience{\href{https://vigue.me/posts/tabletop-kinetic-sand-robot-part-1-cad}{Autonomous Kinetic Sand Art Table}}{Nov 2022 - May 2025}
     \explanationdetail{
     \smallskip
     \coloredbullet\ %
-     Custom PCB with NFC frontend and secure element functioning as an Apple Home Key reader with secure on-device key storage
+     Custom 4-layer ESP32-S3 PCB with STUSB4500 USB-C PD negotiation, dual TMC2209 stepper drivers with SPI control, eMMC storage with impedance-matched high-speed trace routing, and a 95\% efficiency buck converter holding temperature rise under 10\textdegree C with careful power plane layout for high-current traces
 
      \smallskip
      \coloredbullet\ %
-     Firmware in C on ESP-IDF managing NFC communication, secure element operations, and secure boot chain
+     Designed custom polar mechanism optimized for low-cost 3D printing; wrote a polar-based lookahead/lookback motion planner with smooth acceleration blending across changing Cartesian directions
+
+     \smallskip
+     \coloredbullet\ %
+     Custom Vue app with real-time pattern preview, remote control over mTLS, and a community pattern store with 1,000+ downloadable patterns
 
     \smallskip
      }
 %
 \smallskip
 \smallskip
-%
 \section{Extracurriculars}
      %
-    \datedexperience{Jellyfin --- SwiftFin Project Lead}{2022 - Present}
-    \explanation{Architecture and development lead for the native iOS/tvOS video client}{}
-    \datedexperience{Autodesk Student Ambassador}{Aug 2024 - Present}
-    \datedexperience{JLCPCB Content Creator}{Mar 2024 - Present}
     \datedexperience{Eagle Scout}{Achieved 2022}
-    \explanation{Boy Scouts of America}{}
      %
-%
-%
-\section{Awards}
-%
-\explanationdetail{
-\smallskip
-\coloredbullet\ %
-\textbf{Judge's Prize}: Making Time \emph{Instructables} - 2024
-
-\smallskip
-\coloredbullet\ %
-\textbf{First Prize}: Remake It - Student Design Contest \emph{Instructables} - 2024
-
-\smallskip
-\coloredbullet\ %
-\textbf{Grand Prize}: Fusion 360 Contest \emph{Instructables} - 2023
-
-\smallskip
-\coloredbullet\ %
-\textbf{First Prize}: Lighting Challenge \emph{Instructables} - 2022
- }
 \end{document}
